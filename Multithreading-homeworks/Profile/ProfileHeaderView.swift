@@ -103,6 +103,12 @@ lazy var setStatusButton: UIButton = {
 
 private var statusText: String = ""
 
+    public func configurationHeader(user:User) {
+        avatarImageView.image = user.avatar
+        statusLabel.text = user.status
+        fullNameLabel.text = user.fullName
+        }
+
 @objc func buttonPressed() {
     statusLabel.text = statusText
     print("\(statusLabel.text!)")

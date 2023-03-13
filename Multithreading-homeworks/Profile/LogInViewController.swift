@@ -109,8 +109,24 @@ class LogInViewController: UIViewController {
     }
     
     @objc func action(){
-            let exampleController = ProfileViewController()
-            navigationController?.pushViewController(exampleController, animated: true)
+        #if DEBUG
+        let authorizationService = CurrentUserService()
+        #else
+        let authorizationService = TestUserService()
+        #endif
+        
+        if let user = authorizationService.authorization(login: login ?? "") {
+            let profile = ProfileViewController(userService: user)
+            self.navigationController?.pushViewController(profile, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Не верный логин", message: "Логин не соответсвует", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     private func setupGestures() {
@@ -170,6 +186,9 @@ extension LogInViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {}
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField.tag == 0 {
+            self.login = textField.text
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
