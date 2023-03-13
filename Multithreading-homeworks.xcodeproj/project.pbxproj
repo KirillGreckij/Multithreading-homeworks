@@ -28,6 +28,7 @@
 		1CB7FA0429BB170F007DEB6C /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB7F9FE29BB170F007DEB6C /* StorageService.framework */; };
 		1CB7FA0529BB170F007DEB6C /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB7F9FE29BB170F007DEB6C /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CB7FA0B29BB1731007DEB6C /* PostProf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7FA0A29BB1731007DEB6C /* PostProf.swift */; };
+		1CCC3B5A29BF035900BBCE07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC3B5929BF035900BBCE07 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1CB7F9FE29BB170F007DEB6C /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB7FA0029BB170F007DEB6C /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		1CB7FA0A29BB1731007DEB6C /* PostProf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProf.swift; sourceTree = "<group>"; };
+		1CCC3B5929BF035900BBCE07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB7F9E929BB1398007DEB6C /* ProfileViewController.swift */,
+				1CCC3B5929BF035900BBCE07 /* User.swift */,
 				1CB7F9EB29BB158B007DEB6C /* LogInViewController.swift */,
 				1CB7F9ED29BB15AE007DEB6C /* PhotosTableViewCell.swift */,
 				1CB7F9EF29BB15D2007DEB6C /* PhotosViewController.swift */,
@@ -291,6 +294,7 @@
 				1CB7F9F029BB15D2007DEB6C /* PhotosViewController.swift in Sources */,
 				1CB7F9F829BB165C007DEB6C /* PostTableViewCell.swift in Sources */,
 				1CB7F9DD29BB11D8007DEB6C /* TabBarController.swift in Sources */,
+				1CCC3B5A29BF035900BBCE07 /* User.swift in Sources */,
 				1CB7F9C829BB10CB007DEB6C /* AppDelegate.swift in Sources */,
 				1CB7F9EC29BB158B007DEB6C /* LogInViewController.swift in Sources */,
 				1CB7F9F229BB15F1007DEB6C /* PhotosCollectionViewCell.swift in Sources */,

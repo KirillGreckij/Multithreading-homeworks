@@ -10,6 +10,16 @@ import StorageService
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var userService: User
+        init(userService: User) {
+            self.userService = userService
+            super.init(nibName: nil, bundle: nil)
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    
     public let post = PostProf.posts()
     let photosTable = "PhotosTableViewCell"
     
@@ -85,6 +95,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProfileHeaderView") as? ProfileHeaderView
+            headerView?.configurationHeader(user: userService)
             return  headerView
         }
         return nil
